@@ -24,6 +24,8 @@
         packages = [ python ];
         shellHook = ''
           export MNE_DATA="$PWD/data"
+          mkdir -p "$MNE_DATA"
+          export MNE_DATASETS_EEGBCI_PATH="$MNE_DATA"
           echo ""	
    	  echo "Link Start -- Loaded Libraries: MNE, Scikit-Learn, Pandas, Jupyter"
 	  echo ""
