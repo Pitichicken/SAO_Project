@@ -1,6 +1,8 @@
 import mne
 from mne.datasets import eegbci
 
+# load a recording and look whats in it
+
 path = eegbci.load_data(1, [4])[0]
 raw = mne.io.read_raw_edf(path, preload=True)
 
